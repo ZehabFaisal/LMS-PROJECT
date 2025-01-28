@@ -1,0 +1,410 @@
+﻿
+@{
+    ViewBag.Title = "Courses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .auth-buttons {
+        display: flex;
+        gap: 10px;
+        margin-right: -60px;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        position: relative;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        margin-bottom: 2rem;
+    }
+
+        .heading::after {
+            content: url("/img/separator.svg");
+            display: block;
+            width: 14rem;
+            margin-inline: auto;
+            margin-top: -1rem;
+        }
+    .courses .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 2rem;
+    }
+
+        .courses .box-container .box .image {
+            height: 25rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+            .courses .box-container .box .image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                cursor: pointer;
+            }
+
+        .courses .box-container .box:hover .image img:hover {
+            transform: scale(1.1);
+            opacity: 0.7;
+        }
+
+        .courses .box-container .box .image h3 {
+            font-size: 1.5rem;
+            color: #444;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: .5rem 1.5rem;
+            background: var(--white);
+        }
+
+        .courses .box-container .box .content {
+            padding: 2rem;
+            position: relative;
+            border: 0.1rem solid var(--primary-color);
+        }
+
+            .courses .box-container .box .content h4 {
+                position: absolute;
+                background: var(--primary-color);
+                color: var(--secondary);
+                top: -3rem;
+                right: 1.5rem;
+                width: 6rem;
+                height: 6rem;
+                line-height: 6rem;
+                text-align: center;
+                font-size: 1.4rem;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+                .courses .box-container .box .content h4:hover {
+                    background-color: var(--secondary);
+                    color: var(--primary-color);
+                    font-weight: 700;
+                }
+
+            .courses .box-container .box .content p {
+                font-size: 1.4rem;
+                color: #444;
+                line-height: 2;
+            }
+
+            .courses .box-container .box .content h3 {
+                font-size: 2rem;
+                text-decoration: solid;
+                text-transform: capitalize;
+                color: #444;
+            }
+
+            .courses .box-container .box .content .stars {
+                padding: 1rem 0;
+            }
+
+                .courses .box-container .box .content .stars i {
+                    font-size: 1.7rem;
+                    color: var(--primary-color);
+                    margin-left: 2.5px;
+                }
+
+                .courses .box-container .box .content .stars span {
+                    font-size: 1.4rem;
+                    color: #777;
+                    margin-left: 0.5rem;
+                }
+
+            .courses .box-container .box .content .icons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 2rem;
+                padding-top: 2rem;
+                border-top: 0.1rem solid var(--primary-color);
+            }
+
+                .courses .box-container .box .content .icons span {
+                    font-size: 1.5rem;
+                    color: #444;
+                }
+
+                    .courses .box-container .box .content .icons span i {
+                        color: var(--primary-color);
+                        padding-right: .5rem;
+                    }
+
+    #loadMore {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: var(--primary-color);
+        color: #fff;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #loadMore:hover {
+        background-color: var(--secondary);
+        color: var(--primary-color);
+    }
+</style>
+
+<section class="courses" id="courses">
+    <h1 class="heading" style="margin-top: -40px;">Our Famous Courses</h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="/img/web.jpg" alt="Course 1">
+                <h3>Basics</h3>
+            </div>
+            <div class="content">
+                <h4>$20.00</h4>
+                <p>Updated 01/01/2025</p>
+                <h3>Web App Development</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span> (785)</span>
+                </div>
+                <div class="icons">
+                    <span><i class="far fa-bookmark"></i> 12 lessons</span>
+                    <span><i class="far fa-clock"></i> 8h 30m 10s</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/course2.jpg" alt="Course 2">
+                <h3>Basics</h3>
+            </div>
+            <div class="content">
+                <h4>$30.00</h4>
+                <p>Updated 01/01/2025</p>
+                <h3>Machine Learning</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span> (785)</span>
+                </div>
+                <div class="icons">
+                    <span><i class="far fa-bookmark"></i> 5 lessons</span>
+                    <span><i class="far fa-clock"></i> 4h 15m 20s</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/MAD.jpg" alt="Course 3">
+                <h3>Basics</h3>
+            </div>
+            <div class="content">
+                <h4>$40.50</h4>
+                <p>Updated 01/01/2025</p>
+                <h3>Mobile App Development</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span> (785)</span>
+                </div>
+                <div class="icons">
+                    <span><i class="far fa-bookmark"></i> 8 lessons </span>
+                    <span><i class="far fa-clock"></i> 8h 25m 9s</span>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/img/blockchain.jpg" alt="Course 4">
+                <h3>Basics</h3>
+            </div>
+            <div class="content">
+                <h4>$33.50</h4>
+                <p>Updated 01/01/2025</p>
+                <h3> Blockchain Technology </h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span> (785)</span>
+                </div>
+                <div class="icons">
+                    <span><i class="far fa-bookmark"></i> 9 lessons</span>
+                    <span><i class="far fa-clock"></i> 6h 40m 10s</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/NLP.png" alt="Course 5">
+                <h3>Basics</h3>
+            </div>
+            <div class="content">
+                <h4>$28.50</h4>
+                <p>Updated 01/01/2025</p>
+                <h3> Natural Language Processing </h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span> (785)</span>
+                </div>
+                <div class="icons">
+                    <span><i class="far fa-bookmark"></i> 12 lessons</span>
+                    <span><i class="far fa-clock"></i> 10h 35m 40s</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/CC.jpeg" alt="Course 3">
+                <h3>Basics</h3>
+            </div>
+            <div class="content">
+                <h4>$35.45</h4>
+                <p>Updated 01/01/2025</p>
+                <h3> Cloud Computing </h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span> (785)</span>
+                </div>
+                <div class="icons">
+                    <span><i class="far fa-bookmark"></i> 7 lessons</span>
+                    <span><i class="far fa-clock"></i> 5h 40m 18s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden cards (to be shown when 'Load More' is clicked) -->
+        <div class="box hidden">
+            <div class="image">
+                <img src="/img/cyber-security.jpg" alt="Course 4">
+                <h3>Basics</h3>
+            </div>
+            <div class="content">
+                <h4>$40.55</h4>
+                <p>Updated 01/01/2025</p>
+                <h3>Cybersecurity Basics</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span> (785)</span>
+                </div>
+                <div class="icons">
+                    <span><i class="far fa-bookmark"></i> 11 lessons</span>
+                    <span><i class="far fa-clock"></i> 9h 50m 20s</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box hidden">
+            <div class="image">
+                <img src="/img/BDA.jpg" alt="Course 5">
+                <h3>Basics</h3>
+            </div>
+            <div class="content">
+                <h4>$25.30</h4>
+                <p>Updated 01/01/2025</p>
+                <h3>Big Data Analytics</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span> (785)</span>
+                </div>
+                <div class="icons">
+                    <span><i class="far fa-bookmark"></i> 6 lessons</span>
+                    <span><i class="far fa-clock"></i> 6h 30m 40s</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box hidden">
+            <div class="image">
+                <img src="/img/AI.jpg" alt="Course 6">
+                <h3>Basics</h3>
+            </div>
+            <div class="content">
+                <h4>$49.99</h4>
+                <p>Updated 01/01/2025</p>
+                <h3>Artificial Intelligence</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span> (785)</span>
+                </div>
+                <div class="icons">
+                    <span><i class="far fa-bookmark"></i> 10 lessons</span>
+                    <span><i class="far fa-clock"></i> 10h 30m 5s</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="btn" id="loadMoreBtn" style="margin-left: 460px; margin-top: 25px;">
+        <span class="text text-1"> Load More </span>
+        <span class="text text-2" aria-hidden="true"> Load More </span>
+    </a>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const loadMoreBtn = document.getElementById("loadMoreBtn");
+        const hiddenBoxes = document.querySelectorAll(".box.hidden");
+        let count = 0;
+
+        loadMoreBtn.addEventListener("click", function () {
+            const Showed_Boxes = Array.from(hiddenBoxes).slice(count * 3, (count + 1) * 3);
+
+            Showed_Boxes.forEach((box) => {
+                box.classList.remove("hidden");
+            });
+            count++;
+
+            if ((count * 3) >= hiddenBoxes.length) {
+                loadMoreBtn.style.display = "none";
+            }
+        });
+    });
+</script>

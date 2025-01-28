@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "Teachers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .auth-buttons {
+        display: flex;
+        gap: 10px;
+        margin-right: -60px;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        position: relative;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        margin-bottom: 2rem;
+    }
+
+        .heading::after {
+            content: url("/img/separator.svg");
+            display: block;
+            width: 14rem;
+            margin-inline: auto;
+            margin-top: -1rem;
+        }
+    .teacher .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 2rem;
+    }
+
+        .teacher .box-container .box {
+            background: var(--white);
+            box-shadow: var(--box-shadow);
+            border-radius: .5rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+            .teacher .box-container .box .image {
+                position: relative;
+                overflow: hidden;
+            }
+
+                .teacher .box-container .box .image img {
+                    background-color: var(--secondary);
+                    width: 100%;
+                }
+
+            .teacher .box-container .box:hover .image .share {
+                bottom: 0;
+            }
+
+            .teacher .box-container .box .image .share {
+                position: absolute;
+                bottom: -10rem;
+                left: 0;
+                right: 0;
+                padding: 2rem;
+            }
+
+            .teacher .box-container .box:hover .image img {
+                background-color: var(--primary-color);
+            }
+
+            .teacher .box-container .box .image .share a {
+                height: 4rem;
+                width: 4rem;
+                line-height: 4rem;
+                font-size: 2rem;
+                margin: 0 1rem;
+                color: var(--secondary);
+                background: var(--primary-color);
+                border-radius: .5rem;
+            }
+
+                .teacher .box-container .box .image .share a:hover {
+                    color: var(--primary-color);
+                    background: var(--secondary);
+                }
+
+            .teacher .box-container .box .content {
+                padding: 2rem;
+                padding-top: 1rem;
+                align-items: center;
+            }
+
+                .teacher .box-container .box .content h3 {
+                    font-size: 2rem;
+                    color: var(--black);
+                }
+
+                .teacher .box-container .box .content span {
+                    font-size: 1.5rem;
+                    line-height: 2;
+                    color: #777;
+                }
+</style>
+
+<section class="teacher" id="teacher">
+    <h1 class="heading" style="margin-top: -40px;">our expert teacher</h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="/img/teacher-1.png" alt="">
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3> John Doe </h3>
+                <span> Instructor </span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/teacher-2.png" alt="">
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3> Sophia Marie </h3>
+                <span> Instructor </span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/teacher-3.png" alt="">
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3> Alexander Davis </h3>
+                <span> Instructor </span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/teacher-4.png" alt="">
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3> Isabella Rose </h3>
+                <span> Instructor </span>
+            </div>
+        </div>
+    </div>
+</section>

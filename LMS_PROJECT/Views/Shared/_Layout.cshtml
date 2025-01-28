@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="~/CSS/style.css" rel="stylesheet" />
+
+
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/bootstrap.esm.js"></script>
+    <script src="~/Scripts/bootstrap.esm.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.7.0.intellisense.js"></script>
+    <script src="~/Scripts/jquery-3.7.0.js"></script>
+    <script src="~/Scripts/jquery-3.7.0.min.js"></script>
+    <script src="~/Scripts/jquery-3.7.0.slim.js"></script>
+    <script src="~/Scripts/jquery-3.7.0.slim.min.js"></script>
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <title> LMS PROJECT </title>
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fa-solid fa-book"> </i> Learning Hub </a>
+
+        <nav class="navbar">
+            <a href="~/Home/Index" class="nav-links"> Home </a>
+            <a href="~/Home/About" class="nav-links"> About Us </a>
+            <a href="~/Home/Courses" class="nav-links"> Courses </a>
+            <a href="~/Home/Teacher" class="nav-links"> Teacher </a>
+            <a href="~/Home/Reviews" class="nav-links"> Review </a>
+            <a href="~/Home/Blog" class="nav-links"> Blog </a>
+            <a href="~/Home/Contact" class="nav-links"> Contact Us </a>
+        </nav>
+
+        <div class="auth-buttons">
+            <a href="~/Home/Login" class="btn">
+                <span class="text text-1"> Log In </span>
+                <span class="text text-2" aria-hidden="true"> Log In </span>
+            </a>
+
+            <a href="~/Home/SignUp" class="btn">
+                <span class="text text-1"> Sign Up </span>
+                <span class="text text-2" aria-hidden="true"> Sign Up </span>
+            </a>
+        </div>
+    </header>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <section class="footer-section">
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h3> About Learning Hub </h3>
+                <p>
+                    Learning Hub: A seamless Learning Management System to explore courses, track
+                    progress, and achieve goals effortlessly.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#review">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-envelope" style="color: #ecf0f1"></i>
+                        <a href="mailto:info@learninghub.com"
+                           style="color: #ecf0f1"> info@learninghub.com</a>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone" style="color: #ecf0f1;"></i> <a href="tel:+12345678901"
+                                                                                style="color: #ecf0f1"> +1-234-567-8901</a>
+                    </li>
+
+                    <li> <i class="fas fa-map-marker-alt"></i> 123 LMS Lane, Education City</li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &#169; 2024 Learning Hub | All Rights Reserved. <a href="#privacy-policy">
+                    Privacy Policy
+                </a> | <a href="#terms">Terms of Use</a>
+            </p>
+        </div>
+    </section>
+</body>
+</html>

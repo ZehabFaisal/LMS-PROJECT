@@ -1,0 +1,197 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .auth-buttons {
+        display: flex;
+        gap: 10px;
+        margin-right: -60px;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        position: relative;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        margin-bottom: 2rem;
+    }
+
+        .heading::after {
+            content: url("/img/separator.svg");
+            display: block;
+            width: 14rem;
+            margin-inline: auto;
+            margin-top: -1rem;
+        }
+
+    .about .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        .about .container .about-images {
+            position: relative;
+            flex: 1 1 40rem;
+        }
+
+            .about .container .about-images img {
+                width: 85%;
+                cursor: pointer;
+            }
+
+                .about .container .about-images img:hover {
+                    opacity: 0.8;
+                }
+
+            .about .container .about-images .about-img {
+                position: absolute;
+                bottom: -10rem;
+                right: 1.5rem;
+                width: 25rem;
+                padding-block: 5rem;
+                opacity: 1 !important;
+            }
+
+        .about .container .about-content {
+            flex: 1 1 50rem;
+            padding-left: 8rem;
+            padding-top: 6rem;
+        }
+
+            .about .container .about-content h3 {
+                font-size: 3.4rem;
+                color: var(--primary-color);
+                text-decoration: underline;
+            }
+
+            .about .container .about-content p {
+                font-size: 1.6rem;
+                word-spacing: 1px;
+                font-weight: 500;
+                line-height: 1.5;
+                padding: 1rem 0;
+                color: #333;
+                text-align: justify;
+            }
+
+    .subjects .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+    }
+
+        .subjects .box-container .box {
+            padding: 3rem 2rem;
+            background-color: var(--secondary);
+            cursor: pointer;
+            text-align: center;
+            border: 0.1rem solid var(--primary-color);
+            border-radius: 10px;
+        }
+
+            .subjects .box-container .box:hover {
+                background: var(--primary-color);
+            }
+
+            .subjects .box-container .box img {
+                height: 10rem;
+                margin-bottom: 0.5rem;
+                opacity: 1;
+            }
+
+                .subjects .box-container .box img:hover {
+                    opacity: 0.8;
+                }
+
+            .subjects .box-container .box h3 {
+                font-size: 2.1rem;
+                color: #444;
+                margin-top: 10px;
+                padding: 0.5rem 0;
+                text-transform: capitalize;
+            }
+
+            .subjects .box-container .box:hover h3 {
+                color: #fff;
+            }
+
+            .subjects .box-container .box p {
+                font-size: 1.4rem;
+                line-height: 2;
+                color: #333;
+                text-align: center;
+            }
+
+            .subjects .box-container .box:hover p {
+                color: #fff;
+            }
+</style>
+
+<section class="about" id="about">
+    <h1 class="heading" style="margin-top:-40px;"> About Us </h1>
+    <div class="container">
+        <figure class="about-images">
+            <img src="/img/about.jpg" alt="Image 1" height="500">
+            <img src="/img/about-1.jpg" alt="Image 2" class="about-img">
+        </figure>
+
+        <div class="about-content">
+            <h3> 18 Years Of Experience </h3>
+            <p>
+                With 18 years of experience, we have been pioneers in transforming education through innovative
+                technology. Our Learning Management System (LMS) has empowered educators and learners globally
+                by providing seamless, engaging, and personalized learning experiences. Trusted by institutions
+                worldwide, our platform has become a cornerstone for fostering knowledge, growth, and success
+                in diverse educational environments.
+            </p>
+
+            <p>
+                Our journey is defined by continuous innovation and a commitment to excellence. By integrating
+                cutting-edge tools and staying ahead of educational trends, we ensure a future-ready learning
+                experience for all. From classrooms to corporate training, we take pride in making learning
+                accessible, effective, and transformative. Join us as we continue shaping the future of education
+                with passion and purpose.
+            </p>
+
+            <a href="#" class="btn">
+                <span class="text text-1"> Read More </span>
+                <span class="text text-2" aria-hidden="true"> Read More </span>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="subjects">
+    <h1 class="heading" style="margin-top: -130px;"> Our Popular Subjects </h1>
+    <div class="box-container" style="margin-top: 40px;">
+
+        <div class="box">
+            <img src="/img/subject-1.png" alt="Subject 1">
+            <h3> Development </h3>
+            <p> Master coding and create cutting-edge applications </p>
+        </div>
+
+        <div class="box">
+            <img src="/img/subject-2.png" alt="Subject 2">
+            <h3> Mathematics </h3>
+            <p> Build problem-solving skills and logical reasoning </p>
+        </div>
+
+        <div class="box">
+            <img src="/img/subject-3.png" alt="Subject 3">
+            <h3> Graphic Designing </h3>
+            <p> Bring your ideas to life with amazing designs </p>
+        </div>
+
+        <div class="box">
+            <img src="/img/subject-4.png" alt="Subject 4">
+            <h3> Engineering </h3>
+            <p> Explore innovations that shape the future </p>
+        </div>
+    </div>
+</section>

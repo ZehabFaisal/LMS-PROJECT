@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .auth-buttons {
+        display: flex;
+        gap: 10px;
+        margin-right: -60px;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        position: relative;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        margin-bottom: 2rem;
+    }
+
+        .heading::after {
+            content: url("/img/separator.svg");
+            display: block;
+            width: 14rem;
+            margin-inline: auto;
+            margin-top: -1rem;
+        }
+    .contact .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+    }
+
+        .contact .row .image {
+            flex: 1 1 40rem;
+        }
+
+            .contact .row .image img {
+                width: 100%;
+            }
+
+        .contact .row form {
+            background-color: var(--secondary);
+            flex: 1 1 40rem;
+            border: 0.6rem solid var(--primary-color);
+            padding: 2rem;
+        }
+
+            .contact .row form h3 {
+                font-size: 2.5rem;
+                color: #444;
+                font-weight: 800;
+                padding-bottom: 1rem;
+            }
+
+            .contact .row form .box {
+                width: 100%;
+                font-size: 1.6rem;
+                padding: 1.2rem 1.4rem;
+                border: 2px solid var(--primary-color);
+                border-radius: 10px;
+                margin: .7rem 0;
+            }
+
+                .contact .row form .box:focus {
+                    color: var(--primary-color);
+                    font-weight: 700;
+                }
+
+            .contact .row form textarea {
+                height: 15rem;
+            }
+</style>
+
+<section class="contact" id="contact">
+    <h1 class="heading" style="margin-top: -20px;">contact us</h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="/img/contact.png" alt="">
+        </div>
+
+        <form action="">
+            <h3> Get In Touch With Us </h3>
+            <input type="text" placeholder="Enter your name here...." class="box">
+
+            <input type="email" placeholder="Enter your email here...." class="box">
+
+            <input type="number" placeholder="Enter your phone number here..." class="box">
+            <textarea placeholder="message" class="box" cols="30" rows="10"> </textarea>
+
+            <a href="#" class="btn">
+                <span class="text text-1"> send message </span>
+                <span class="text text-2" aria-hidden="true"> send message </span>
+            </a>
+        </form>
+    </div>
+</section>

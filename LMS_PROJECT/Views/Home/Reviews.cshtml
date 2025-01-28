@@ -1,0 +1,353 @@
+﻿
+@{
+    ViewBag.Title = "Reviews";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .auth-buttons {
+        display: flex;
+        gap: 10px;
+        margin-right: -60px;
+    }
+
+    .review .slide {
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(134, 134, 134, 0.1);
+  border-radius: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.review .slide p {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: .5rem;
+  line-height: 1.8;
+  color: #444;
+}
+.review .slide .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.review .slide .wrapper .separator {
+  width: .8rem;
+  height: .8rem;
+  border: .1rem solid var(--primary-color);
+  transform: rotate(45deg);
+}
+    .heading {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        position: relative;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        margin-bottom: 2rem;
+    }
+
+        .heading::after {
+            content: url("/img/separator.svg");
+            display: block;
+            width: 14rem;
+            margin-inline: auto;
+            margin-top: -1rem;
+        }
+
+.review .slide .fa-quote-right {
+  position: absolute;
+  bottom: 3rem; right: 3rem;
+  font-size: 6rem;
+  color: var(--secondary);
+}
+.review .slide .user {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+}
+.review .slide .user img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 15%;
+  object-fit: cover;
+  border: .1rem solid var(--primary-color);
+  padding: .5rem;
+}
+.review .slide .user h3 {
+  font-size: 2rem;
+  color: var(--black);
+  padding-bottom: .5rem;
+}
+.review .slide .user .stars i {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+.review-info {
+  margin-top: 3rem;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-info h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.review-info p {
+  font-size: 1.6rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+}
+
+.review-info blockquote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: black;
+    font-weight: bolder;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.review-info .highlight {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.review-info .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.review-info .btn:hover {
+  background-color: var(--secondary-color);
+}
+</style>
+
+<section class="review" id="review">
+    <h1 class="heading" style="margin-top: -30px;"> Our Student's Reviews </h1>
+    <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laudantium distinctio dolore
+                    molestias facilis velit pariatur maiores debitis inventore.
+                </p>
+                <div class="wrapper">
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                </div>
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="/img/review-1.png" alt="Review 1">
+                    <div class="user-info">
+                        <h3> John Doe </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laudantium distinctio dolore
+                    molestias facilis velit pariatur maiores debitis inventore.
+                </p>
+                <div class="wrapper">
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                </div>
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="/img/review-2.png" alt="Review 2">
+                    <div class="user-info">
+                        <h3> Emily Davis </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laudantium distinctio dolore
+                    molestias facilis velit pariatur maiores debitis inventore.
+                </p>
+                <div class="wrapper">
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                </div>
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="/img/review-3.png" alt="Review 3">
+                    <div class="user-info">
+                        <h3> Alex Johnson </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laudantium distinctio dolore
+                    molestias facilis velit pariatur maiores debitis inventore.
+                </p>
+                <div class="wrapper">
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                </div>
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="/img/review-4.png" alt="Review 4">
+                    <div class="user-info">
+                        <h3> Sara Lee </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laudantium distinctio dolore
+                    molestias facilis velit pariatur maiores debitis inventore.
+                </p>
+                <div class="wrapper">
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                </div>
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="/img/review-5.png" alt="Review 5">
+                    <div class="user-info">
+                        <h3> Michael Smith </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laudantium distinctio dolore
+                    molestias facilis velit pariatur maiores debitis inventore.
+                </p>
+                <div class="wrapper">
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                </div>
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="/img/review-6.png" alt="Review 6">
+                    <div class="user-info">
+                        <h3> Emma Kate </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-info" style="margin-top: 30px;">
+        <h2>Real Stories from Real Learners</h2>
+        <p>
+            At <span class="highlight">Learning Hub</span>, we believe in delivering value through quality education.
+            Our student's reviews are a testament to our commitment to excellence.
+        </p>
+        <p>
+            From improving professional skills to achieving career milestones, our platform has been a trusted partner
+            for thousands of learners worldwide.
+            Hear their stories, explore their journeys, and discover how Learning Hub can help you unlock your potential.
+        </p>
+
+        <blockquote>
+            <em>"Being a student is easy. Learning requires actual work"</em>  (William Crawford)
+        </blockquote>
+    </div>
+</section>
+
+<script>
+    // REVIEW BOXES SWIPER FUNCTIONALITY
+
+    var swiper = new Swiper(".review-slider", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
