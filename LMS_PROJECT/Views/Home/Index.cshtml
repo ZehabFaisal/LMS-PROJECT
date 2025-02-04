@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<h2> @ViewBag.Title </h2>
 <style>
     .heading {
         text-align: center;
@@ -23,11 +23,12 @@
             margin-inline: auto;
             margin-top: -1rem;
         }
+
     :root {
         --primary-color: #12c2b9;
         --secondary: #dbfffe;
         --black: #141414;
-        --white: #fff; 
+        --white: #fff;
         --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
     }
 
@@ -178,9 +179,9 @@
             cursor: pointer;
         }
 
-        .header .icons div:hover {
-            color: var(--primary-color);
-        }
+            .header .icons div:hover {
+                color: var(--primary-color);
+            }
 
     .home {
         display: flex;
@@ -267,7 +268,6 @@
             line-height: 1.5;
             text-align: center;
         }
-
 </style>
 
 <section class="home" id="home">

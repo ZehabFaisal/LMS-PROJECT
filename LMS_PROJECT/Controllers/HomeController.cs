@@ -6,6 +6,7 @@ namespace LMS_PROJECT.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "Index";
             return View();
         }
 
@@ -40,9 +41,9 @@ namespace LMS_PROJECT.Controllers
         {
             return View();
         }
-        public ActionResult SignUp()
-        {
-            return View();
-        }
+        //public ActionResult SignUp()
+        //{
+        //    return View();
+        //}
     }
 }

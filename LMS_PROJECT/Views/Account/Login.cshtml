@@ -1,6 +1,12 @@
 ﻿
 @{
     ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutSignup.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
 }
 <style>
@@ -123,18 +129,17 @@
     }
 </style>
 <div class="wrapper">
-    <p class="error">
+    <p style="color:red;">
         @ViewBag.Error
-
     </p>
-    <form action="@Url.Action("Login", "Account")" method="post">
+    <form method="post">
         <h1>Login</h1>
         <div class="input-box">
-            <input type="text" name="Username" placeholder="Username" required>
+            <input type="text" name="username" placeholder="Username" required>
             <i class='bx bxs-user'></i>
         </div>
         <div class="input-box">
-            <input type="password" name="Password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" required>
             <i class='bx bxs-lock-alt'></i>
         </div>
         <div class="remember-forgot">

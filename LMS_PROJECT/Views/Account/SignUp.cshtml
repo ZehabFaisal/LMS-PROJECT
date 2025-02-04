@@ -1,7 +1,7 @@
 ﻿
 @{
-    ViewBag.Title = "Login";
-    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_LayoutSignup.cshtml";
 }
 <style>
     body {
@@ -9,16 +9,15 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background-image: url("/img/login-image.jpg");
+        background-image: url('/img/login-image.jpg');
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
     }
 
     .wrapper {
         width: 420px;
         background: transparent;
-        border: 2px solid rgba(255,255,255,0.2);
+        border: 2px solid rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(20px);
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
         color: #fff;
@@ -94,9 +93,9 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         cursor: pointer;
         font-size: 16px;
-        font-weight: 600;
-        background-color: blue;
         color: white;
+        background-color: blue;
+        font-weight: 600;
     }
 
     .wrapper .register-link {
@@ -122,28 +121,38 @@
         margin: -10px 0 15px;
     }
 </style>
-<div class="wrapper">
-    <p class="error">
-        @ViewBag.Error
 
-    </p>
-    <form action="@Url.Action("Login", "Account")" method="post">
-        <h1>Login</h1>
+
+<div class="wrapper">
+    <form method="post">
+        <h1>Sign Up</h1>
         <div class="input-box">
-            <input type="text" name="Username" placeholder="Username" required>
-            <i class='bx bxs-user'></i>
+            <input type="text" name="FirstName" placeholder="First Name" required>
+
+        </div>
+        <div class="input-box">
+            <input type="text" name="LastName" placeholder="Last Name" required>
+
+        </div>
+        <div class="input-box">
+            <input type="text" name="Email" placeholder="Email" required>
+
         </div>
         <div class="input-box">
             <input type="password" name="Password" placeholder="Password" required>
             <i class='bx bxs-lock-alt'></i>
         </div>
         <div class="remember-forgot">
-            <label><input type="checkbox">Remember Me</label>
-            <a href="">Forget Password?</a>
+            <label><input name="iagree" type="checkbox" value="1">I Agree To The Term Of Services</label>
         </div>
-        <button type="submit" class="button">Login</button>
+        <button type="submit" class="button">Sign Up</button>
+        <br>
+
+        <br>
+        <button type="submit" class="button">Login With Google</button>
         <div class="register-link">
-            <p>Don't Have An Account? <a href="~/Home/SignUp">Register</a></p>
+            <p>Already Have An Account? <a href="~/Home/Login">Login</a></p>
         </div>
     </form>
 </div>
+

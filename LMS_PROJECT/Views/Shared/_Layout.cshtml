@@ -45,15 +45,25 @@
         </nav>
 
         <div class="auth-buttons">
-            <a href="~/Home/Login" class="btn">
-                <span class="text text-1"> Log In </span>
-                <span class="text text-2" aria-hidden="true"> Log In </span>
-            </a>
+            @if (Session["CurrentUser"] != null)
+            {
+                <a href="~/Account/Logout" class="btn">
+                    <span class="text text-1"> Logout </span>
+                    <span class="text text-2" aria-hidden="true"> Logout </span>
+                </a>
+            }
+            else
+            {
+                <a href="~/Account/Login" class="btn">
+                    <span class="text text-1"> Log In </span>
+                    <span class="text text-2" aria-hidden="true"> Log In </span>
+                </a>
+                <a href="~/account/SignUp" class="btn">
+                    <span class="text text-1"> Sign Up </span>
+                    <span class="text text-2" aria-hidden="true"> Sign Up </span>
+                </a>
+            }
 
-            <a href="~/Home/SignUp" class="btn">
-                <span class="text text-1"> Sign Up </span>
-                <span class="text text-2" aria-hidden="true"> Sign Up </span>
-            </a>
         </div>
     </header>
 
